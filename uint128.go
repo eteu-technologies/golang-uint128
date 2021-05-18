@@ -77,6 +77,7 @@ func (u Uint128) And(v Uint128) Uint128 {
 
 // And64 returns u&v.
 func (u Uint128) And64(v uint64) Uint128 {
+	// nolint: staticcheck
 	return Uint128{u.Lo & v, u.Hi & 0}
 }
 
@@ -87,6 +88,7 @@ func (u Uint128) Or(v Uint128) Uint128 {
 
 // Or64 returns u|v.
 func (u Uint128) Or64(v uint64) Uint128 {
+	// nolint: staticcheck
 	return Uint128{u.Lo | v, u.Hi | 0}
 }
 
@@ -97,6 +99,7 @@ func (u Uint128) Xor(v Uint128) Uint128 {
 
 // Xor64 returns u^v.
 func (u Uint128) Xor64(v uint64) Uint128 {
+	// nolint: staticcheck
 	return Uint128{u.Lo ^ v, u.Hi ^ 0}
 }
 
